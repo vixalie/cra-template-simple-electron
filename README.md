@@ -6,7 +6,7 @@ By default, React App as the renderer is located in `src` directory, and the mai
 
 ## Getting Started
 
-To create a Typescript based Electron application, you need run:
+To create an Electron application, you need run:
 
 ```bash
 npx create-react-app my-app --template simple-electron
