@@ -41,26 +41,22 @@ By default, packaged application will be placed in `dist` directory. Remember to
 
 ## Troubleshooting
 
-1. **Electron throws `require() is not defined` on `preload.js`.**
-
-    You need to disable `contextIsolation` in `webPreferences`. When `contextIsolation` is on, `require()` is not usable.
-
 1. **React APP is not load, console says `require() is not defined`, but not on `preload.js`.**
 
-    You maybe disabled `nodeIntegration` in `webPreferences`. Remember, Webpack and Typescript need `require()`.
+   You maybe disabled `nodeIntegration` in `webPreferences`. Remember, Webpack need `require()`. In another case, you may set Webpack's target to `electron-renderer`, that will also make Electron report `require is not defined` when `nodeIntegration` is `false`.
 
 1. **I got 'Electron failed to install correctly'.**
 
-    Run `npm run fix:electron` to redownload Electron module.
+   Run `npm run fix:electron` to redownload Electron module.
 
 ## Special Thanks
 
 This template uses many tools to help developing.
 
--   [concurrently](https://github.com/kimmobrunfeldt/concurrently)
--   [wait-on](https://github.com/jeffbski/wait-on)
--   [react-app-rewired](https://github.com/timarney/react-app-rewired)
--   [customize-cra](https://create-react-app.dev/)
--   [electronmon](https://github.com/catdad/electronmon)
--   [electron-fix](https://github.com/pangxieju/electron-fix)
--   [Electron DevTools Installer](https://github.com/MarshallOfSound/electron-devtools-installer)
+- [concurrently](https://github.com/kimmobrunfeldt/concurrently)
+- [wait-on](https://github.com/jeffbski/wait-on)
+- [react-app-rewired](https://github.com/timarney/react-app-rewired)
+- [customize-cra](https://create-react-app.dev/)
+- [electronmon](https://github.com/catdad/electronmon)
+- [electron-fix](https://github.com/pangxieju/electron-fix)
+- [Electron DevTools Installer](https://github.com/MarshallOfSound/electron-devtools-installer)

@@ -1,5 +1,5 @@
-import { contextBridge } from 'electron';
+const { contextBridge } = require('electron');
 
 contextBridge.exposeInMainWorld('api', {
-    test: () => console.log('context bridge test.')
+  test: () => console.log('context bridge test.')
 });
